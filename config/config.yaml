@@ -1,0 +1,138 @@
+# Path related
+dataset_path: data/raw/Car_Insurance_Claim.csv
+dataset_cleaned_path: data/processed/raw_dataset.pkl
+train_set_path:
+- data/processed/x_train.pkl
+- data/processed/y_train.pkl
+valid_set_path:
+- data/processed/x_valid.pkl
+- data/processed/y_valid.pkl
+test_set_path:
+- data/processed/x_test.pkl
+- data/processed/y_test.pkl
+train_feng_set_path:
+- data/processed/x_train_feng.pkl
+- data/processed/y_train_feng.pkl
+valid_feng_set_path:
+- data/processed/x_valid_feng.pkl
+- data/processed/y_valid_feng.pkl
+test_feng_set_path:
+- data/processed/x_test_feng.pkl
+- data/processed/y_test_feng.pkl
+production_model_path: models/production_model.pkl
+standard_scaler: models/stdscaler.pkl
+training_log_path: log/training_log.json
+
+# Debug related
+print_debug: true
+
+# Predictors and label related
+label: OUTCOME
+predictors:
+- SPEEDING_VIOLATIONS
+- DUIS 
+- PAST_ACCIDENTS
+- CREDIT_SCORE
+- VEHICLE_OWNERSHIP
+- MARRIED
+- CHILDREN
+- ANNUAL_MILEAGE
+- AGE
+- GENDER
+- DRIVING_EXPERIENCE
+- EDUCATION
+- VEHICLE_YEAR
+
+
+# Splitting related
+test_size: 0.3
+valid_size: 0.5
+
+# Columns by data type related
+float_columns:
+- CREDIT_SCORE
+- VEHICLE_OWNERSHIP
+- MARRIED
+- CHILDREN
+- ANNUAL_MILEAGE
+- OUTCOME
+int_columns:
+- ID
+- POSTAL_CODE
+- SPEEDING_VIOLATIONS
+- DUIS
+- PAST_ACCIDENTS
+object_columns:
+- AGE
+- GENDER
+- RACE
+- DRIVING_EXPERIENCE
+- EDUCATION
+- INCOME
+- VEHICLE_YEAR
+- VEHICLE_TYPE
+
+range_annual_mileage:
+- 2000
+- 30000
+range_children:
+- 0
+- 1
+range_married:
+- 0
+- 1
+range_vehicle_ownership:
+- 0
+- 1
+range_credit_score:
+- 0
+- 1
+range_outcome:
+- 0
+- 1
+range_duis:
+- 0
+- 50
+range_speeding_violation:
+- 0
+- 50
+range_past_accidents:
+- 0
+- 50
+range_id:
+- 101
+- 1000000
+range_postal_code:
+- 10000
+- 95000
+value_vehicle_year:
+- after 2015
+- before 2015
+value_gender:
+- female
+- male
+value_education:
+- high school
+- university
+- none
+value_age:
+- 16-25
+- 26-39
+- 40-64
+- 65+
+value_driving_experience:
+- 0-9y
+- 10-19y
+- 20-29y
+- 30y+
+value_race:
+- majority
+- minority
+value_income:
+- poverty
+- working class
+- middle class
+- upper class
+value_vahicle_type:
+- sports car
+- sedan
